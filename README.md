@@ -39,7 +39,7 @@ uvicorn src.main:app --reload
 Your API is now up and running on `http://localhost:8000`.
 docs: `http://localhost:8000/docs`
 
-### Running the tests
+### Running the tests(open another terminal while server is running)
 
 ```bash
 pytest tests/ -v
@@ -69,7 +69,8 @@ Invoke-RestMethod -Uri "http://localhost:8000/expenses/total?category=food" -Met
 # Delete an expense
 Invoke-RestMethod -Uri "http://localhost:8000/expenses/<id>" -Method Delete
 
-############## Project structure #####################
+
+## Project Structure
 
 ```
 expense-tracker-api/
