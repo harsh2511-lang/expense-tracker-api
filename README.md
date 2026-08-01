@@ -3,19 +3,17 @@
 REST API to track personal expenses — add expenses, retrieve all of them, filter by category, calculate sums (overall and per category),
 and delete. Made with FastAPI; in-memory storage is used.
 
+
 ## What I built
 
-POST /expenses – add an expense (title, amount, category, date)
-GET /expenses – get all expenses
-GET /expenses?category=food – filter expenses by category (parameter in URL,
-not a new endpoint — filtration is a variation of "get all",
-not a new resource)
-GET /expenses/total – total amount of all expenses
-GET /expenses/total?category=food – total amount for one category
-DELETE /expenses/{id} – delete an expense (returns 404 if such id doesn't exist)
-Validation of input data using Pydantic: amount must be positive,
-title/category cannot be an empty string, date must be valid
-API documentation auto-generated at /docs and /redoc endpoints (Swagger UI)
+- `POST /expenses` – add an expense (title, amount, category, date)
+- `GET /expenses` – get all expenses
+- `GET /expenses?category=food` – filter expenses by category (parameter in URL, not a new endpoint — filtration is a variation of "get all", not a new resource)
+- `GET /expenses/total` – total amount of all expenses
+- `GET /expenses/total?category=food` – total amount for one category
+- `DELETE /expenses/{id}` – delete an expense (returns 404 if such id doesn't exist)
+- Validation of input data using Pydantic: amount must be positive, title/category cannot be an empty string, date must be valid
+- API documentation auto-generated at `/docs` and `/redoc` endpoints (Swagger UI)
 
 All the data is stored in memory (as a Python dict where
 expense id is used as a key). So all the data is erased
