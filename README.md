@@ -87,14 +87,15 @@ expense-tracker-api/
   tests/
     test_expenses.py
 ```
-
-#################### Design notes #########################
+  ## Design notes 
 
 - IDs are UUIDs, not auto-incrementing integers — prevents id conflicts
   should expenses be ever added simultaneously, and does not expose the number
   of expenses that have ever been created.
-- The storage uses a dict mapped by ID, not a list — deletes and searches
+- The storage uses a dict mapped by ID, not a list — deletes and  
+  searches
   will be O(1) rather than scanning through all expenses.
-- Filters and total amount per category are query parameters on existing
+- Filters and total amount per category are query parameters on
+  existing
   routes, not additional routes — this follows REST principles (filtering the
   list is still the "list resource", not a different resource).
