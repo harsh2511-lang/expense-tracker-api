@@ -69,6 +69,7 @@ Invoke-RestMethod -Uri "http://localhost:8000/expenses/total?category=food" -Met
 # Delete an expense
 Invoke-RestMethod -Uri "http://localhost:8000/expenses/<id>" -Method Delete
 
+```
 
 ## Project Structure
 
